@@ -30,3 +30,17 @@ INSERT INTO owners (full_name, age) VALUES
 ('Melody Pond', 77),
 ('Dean Winchester', 14),
 ('Jodie Whittaker', 38);
+
+UPDATE animals
+SET owners_id = CASE
+	WHEN animals.name = 'Agumon'
+		THEN (SELECT id FROM owners WHERE full_name = 'Sam Smith')
+    WHEN animals.name IN ('Gabumon', 'Pikachu')
+		THEN (SELECT id FROM owners WHERE full_name = 'Jeniffer Orwell')
+	WHEN animals.name IN ('Devimon', 'Plantmon')
+		THEN (SELECT id FROM owners WHERE full_name = 'Bob')
+	WHEN animals.name IN ('Charmander', 'Squirtle', 'Blossom')
+		THEN (SELECT id FROM owners WHERE full_name = 'Melody Pond')
+	WHEN animals.name IN ('Angemon', 'Boarmon')
+		THEN (SELECT id FROM owners WHERE full_name = 'Dean Winchester')
+    END;
