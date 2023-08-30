@@ -39,7 +39,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **The database allows you query different animal species.**
+- **The database allows you run different kinds of querries.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
