@@ -21,3 +21,10 @@ CREATE TABLE species(
 	name VARCHAR(255)
 );
 
+-- Altering 'animals' table
+ALTER TABLE animals
+DROP COLUMN species,
+ADD COLUMN species_id INT,
+	ADD CONSTRAINT fk_species FOREIGN KEY (species_id) REFERENCES species(id),
+ADD COLUMN owners_id INT,
+	ADD CONSTRAINT fk_owners FOREIGN KEY (owners_id) REFERENCES owners(id);
