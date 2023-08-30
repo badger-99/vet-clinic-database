@@ -39,7 +39,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **None at this point.**
+- **The database allows you run different kinds of querries.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -98,7 +98,7 @@ This project doesnt need to be deployed.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **No future features planned at this moment.**
+- **Database management for different users.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
