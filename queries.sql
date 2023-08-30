@@ -57,3 +57,41 @@ SELECT species, MAX(weight_kg) AS maximum_weight_kg,
 SELECT species, ROUND(AVG(escape_attempts), 2) AS escape_attempts
   FROM animals WHERE EXTRACT(YEAR FROM date_of_birth) BETWEEN 1990 AND 2000
   GROUP BY species;
+
+-- JOIN querries
+SELECT full_name AS owner, animals.name AS animal
+  FROM owners
+  JOIN animals on animals.owners_id=owners.id
+  WHERE owners.full_name='Melody Pond';
+
+SELECT animals.name AS animal, species.name AS species
+  FROM animals
+  JOIN species on animals.species_id=species.id
+  WHERE species.name='Pokemon';
+
+SELECT full_name AS owner, animals.name AS animal
+  FROM owners
+  LEFT JOIN animals on animals.owners_id=owners.id;
+
+SELECT species.name AS species, COUNT(animals.name) AS animals
+  FROM species
+  JOIN animals on animals.species_id=species.id
+  GROUP BY species.name;
+
+SELECT owners.full_name AS owner, animals.name AS animal, species.name AS species
+  FROM owners
+  JOIN animals ON animals.owners_id=owners.id
+  JOIN species ON animals.species_id=species.id
+  WHERE owners.full_name='Jeniffer Orwell' AND  species.name='Digimon';
+
+SELECT owners.full_name AS owner, animals.name AS animal, animals.escape_attempts
+  FROM owners
+  LEFT JOIN animals ON animals.owners_id=owners.id
+  WHERE owners.full_name='Dean Winchester' 
+  AND  animals.escape_attempts=0;
+
+SELECT owners.full_name AS owner, COUNT(animals.name) AS animals
+  FROM owners
+  LEFT JOIN animals ON animals.owners_id=owners.id
+  GROUP BY owners.full_name
+  ORDER BY animals DESC LIMIT 1;
