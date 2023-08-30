@@ -43,8 +43,8 @@ SELECT * FROM animals ORDER BY id;
 /*More Queries.*/
 SELECT COUNT(name) AS total_animals FROM animals;
 
-SELECT COUNT(escape_attempts) AS animals_tried_escaping
-  FROM animals WHERE escape_attempts<0;
+SELECT COUNT(escape_attempts) AS no_escape_attempts
+  FROM animals WHERE escape_attempts=0;
 
 SELECT AVG(weight_kg) AS average_weight FROM animals;
 
