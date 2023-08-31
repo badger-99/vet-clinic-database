@@ -56,3 +56,10 @@ INSERT INTO vets (name, age, date_of_graduation) VALUES
 ('Vet Maisy Smith', 26, '2019-01-17'),
 ('Vet Stephanie Mendez', 64, '1981-05-04'),
 ('Vet Jack Harkness', 38, '2008-06-08');
+
+-- Populate specializations table
+INSERT INTO specializations (species_id, vets_id) VALUES
+(1, 1),
+(1, 3),
+(2, 3),
+(2, 4);
