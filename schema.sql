@@ -37,7 +37,7 @@ CREATE TABLE vets(
 	id int PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
 	name VARCHAR(255),
 	age INT,
-	date_of_graduation date
+	date_of_graduation DATE
 );
 
 -- Vets-Species join table
@@ -53,7 +53,9 @@ CREATE TABLE specializations(
 CREATE TABLE visits(
 	animals_id INT,
 	vets_id INT,
+	date_of_visit DATE,
 	CONSTRAINT fk_animals FOREIGN KEY (animals_id) REFERENCES animals(id),
 	CONSTRAINT fk_vets FOREIGN KEY (vets_id) REFERENCES vets(id),
-	PRIMARY KEY (animals_id, vets_id)
+	CONSTRAINT visits_pk PRIMARY KEY
+	(animals_id, vets_id, date_of_visit)
 );
