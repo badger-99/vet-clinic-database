@@ -1,5 +1,6 @@
 /* Database schema to keep the structure of entire database. */
 
+-- Animals table
 CREATE TABLE animals (
   id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
 	name VARCHAR(255),
@@ -10,12 +11,14 @@ CREATE TABLE animals (
 	species VARCHAR(255)
 );
 
+--  Owners table
 CREATE TABLE owners(
 	id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
 	full_name VARCHAR(255),
 	age int
 );
 
+-- Species table
 CREATE TABLE species(
 	id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
 	name VARCHAR(255)
@@ -29,6 +32,7 @@ ADD COLUMN species_id INT,
 ADD COLUMN owners_id INT,
 	ADD CONSTRAINT fk_owners FOREIGN KEY (owners_id) REFERENCES owners(id);
 
+-- Vets table
 CREATE TABLE vets(
 	id int PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
 	name VARCHAR(255),
@@ -36,10 +40,20 @@ CREATE TABLE vets(
 	date_of_graduation date
 );
 
+-- Vets-Species join table
 CREATE TABLE specializations(
 	species_id INT,
 	vets_id INT,
 	CONSTRAINT fk_species FOREIGN KEY (species_id) REFERENCES species(id),
 	CONSTRAINT fk_vets FOREIGN KEY (vets_id) REFERENCES vets(id),
 	PRIMARY KEY (species_id, vets_id)
+);
+
+-- Animals-vets join table
+CREATE TABLE visits(
+	animals_id INT,
+	vets_id INT,
+	CONSTRAINT fk_animals FOREIGN KEY (animals_id) REFERENCES animals(id),
+	CONSTRAINT fk_vets FOREIGN KEY (vets_id) REFERENCES vets(id),
+	PRIMARY KEY (animals_id, vets_id)
 );
