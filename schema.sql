@@ -9,3 +9,22 @@ CREATE TABLE animals (
 	weight_kg FLOAT,
 	species VARCHAR(255)
 );
+
+CREATE TABLE owners(
+	id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+	full_name VARCHAR(255),
+	age int
+);
+
+CREATE TABLE species(
+	id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+	name VARCHAR(255)
+);
+
+-- Altering 'animals' table
+ALTER TABLE animals
+DROP COLUMN species,
+ADD COLUMN species_id INT,
+	ADD CONSTRAINT fk_species FOREIGN KEY (species_id) REFERENCES species(id),
+ADD COLUMN owners_id INT,
+	ADD CONSTRAINT fk_owners FOREIGN KEY (owners_id) REFERENCES owners(id);
