@@ -165,4 +165,4 @@ SELECT vets.name AS vet, species.name AS species, COUNT(animals.species_id)
 
 /*Performance Project*/
 SELECT COUNT(*) FROM visits where animals_id = 4;
-SELECT COUNT(*) FROM visits where vets_id = 2;
+SELECT * FROM visits where vet_id = 2;
