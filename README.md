@@ -94,6 +94,18 @@ This project doesnt need to be deployed.
 - X: [@AlfredMkg](https://twitter.com/AlfredMkg)
 - LinkedIn: [in/alfredmkg](https://www.linkedin.com/in/alfredmkg)
 
+👤 **Sana**
+
+- GitHub: [@SanaTameem](https://github.com/SanaTameem)
+- X: [@sana_tameem](https://twitter.com/sana_tameem)
+- LinkedIn: [in/sana-tameem](https://www.linkedin.com/in/sana-tameem/)
+
+👤 **Sulaimon**
+
+- GitHub: [@sulaimonaa](https://github.com/sulaimonaa)
+- X: [@Ayodej007](https://www.linkedin.com/in/sulaimonaa/)
+- LinkedIn: [in/sulaimonaa](https://www.linkedin.com/in/sulaimonaa/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
