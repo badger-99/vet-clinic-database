@@ -163,5 +163,6 @@ SELECT vets.name AS vet, species.name AS species, COUNT(animals.species_id)
   GROUP BY vets.name, species.name;
 
 
+/*Performance Project*/
 SELECT COUNT(*) FROM visits where animals_id = 4;
-
+SELECT COUNT(*) FROM visits where vets_id = 2;
