@@ -161,4 +161,7 @@ SELECT vets.name AS vet, species.name AS species, COUNT(animals.species_id)
   JOIN species ON animals.species_id=species.id
   WHERE vets_id=(SELECT id FROM vets WHERE name='Vet Maisy Smith')
   GROUP BY vets.name, species.name;
-  
+
+
+SELECT COUNT(*) FROM visits where animals_id = 4;
+
