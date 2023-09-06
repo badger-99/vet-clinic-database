@@ -6,7 +6,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
+  - [📊 Schema Diagram](#schema-diagram)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -43,9 +43,9 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚀 Live Demo <a name="live-demo"></a>
+## 📊 Schema Diagram <a name="schema-diagram"></a>
 
-- [Live Demo Link]() - none
+- [Link to Schema Diagram](https://drawsql.app/teams/my-team-1117/diagrams/vet-clinic)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
